@@ -15,21 +15,36 @@ function generatePassword() {
     return "nah";
   }
 
+  //Lowercase function
   var confirmLowerCase = window.confirm("Would you like lowercases in your password?");
 
   if (confirmLowerCase) {
     characters += "abcdefghijklmnopqrstuvwxyz";
   }
 
+  //Uppercase function
   var confirmUpperCase = window.confirm("Would you like uppercases in your password?");
 
   if (confirmUpperCase) {
     characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  }
+
+  //Numbers function
+  var confirmNumbers = window.confirm("Would you like numbers in yor password?");
+
+  if (confirmNumbers) {
+    characters += "1234567890"
+  }
+
+  //Special characters function
+  var confirmSpecials = window.confirm("Would you like special characters in yor password?");
+
+  if (confirmSpecials) {
+    characters += " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
     console.log(characters);
   }
 
-  // do confirmlasdjfa for numbers and special characters "?!#$%"
-
+  //For loop to decide the password
   for (let i = 0; i < promptLength; i++) {
     // use the character.charAt(randomNumber) method to add a character to password from characters once each iteration
     // use Math.floor(Math.random * characters.length) for the random number    
